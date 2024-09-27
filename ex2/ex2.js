@@ -16,3 +16,10 @@ De R$ 3.751,06 até R$ 4.664,68: 22,5%
 Acima de R$ 4.664,68: 27,5%
 */
 
+var salario = parseFloat(prompt("Digite o seu salário mensal:"));
+
+
+if(salario < 1.302.02){
+    salario = salario / 7.05;
+    console.log("O seu sálario descontado com INSS é " + salario );
+}
