@@ -5,24 +5,21 @@
  digitado e o valor do imposto a ser pago.
 */
 
-var rendaAnual =  parseFloat(prompt("Digite sua renda Anual: "));
-if (rendaAnual < 22.847,77 ){
-    console.log("Você ganha menos que R$22.847,77 portanto não recebera uma taxa de imposto.")
-}else if(rendaAnual < 33.919,81){
-    rendaAnual = rendaAnual + 0.75;
-    console.log("A sua renda estpa " + rendaAnual );
+var rendaAnual = parseFloat(prompt("Digite sua renda anual"));
+
+var imposto = 0;
+if (rendaAnual <= 22847.00){
+    imposto = rendaAnual * 0.075;
+}else if (rendaAnual <= 45012.60){
+    imposto = rendaAnual * 0.15;
+}else if (rendaAnual > 45012.60){
+    imposto = rendaAnual * 0.225;
+}else {
+imposto = 0;
+console.log("Não foi informada uma renda válida!");
 }
 
-
-
-
-
-
-
-
-if (rendaAnual > 45.012,61  ){
-   rendaAnual = rendaAnual + 22.05;
-    console.log("A sua renda é maior que 45.012,60 então você pagará 22,5% de imposto oque resultará em: " + rendaAnual );
-}else if(rendaAnual = 22.847,77){
-    console.log("Sua renda está entre R$ 22.847,77 e R$ 33.919,80 logo sua taxação será de 7,5% ");
-}
+console.log("Calculo do imposto:");
+console.log("Renda anual:", rendaAnual);
+console.log("Imposto devido:", imposto);
+console.log("Total liquido:"), rendaAnual - imposto;
